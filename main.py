@@ -4,6 +4,9 @@ import matplotlib.pyplot as plt
 import numpy as np
 
 def update_status(player_1_board, player_2_board, player_1_score, player_2_score):
+    """
+    It will update the status of the game after each player's turn.
+    """
     print("Player 1's Board:")
     print(player_1_board)
     print("Player 2's Board:")
@@ -12,6 +15,9 @@ def update_status(player_1_board, player_2_board, player_1_score, player_2_score
     print(f"Player 2's Score: {player_2_score}")
 
 def calculate_score(board):
+    """
+    It calculates the score of the player based on the number of ships hit.
+    """
     return sum(cell == 2 for row in board for cell in row)
 
 def main():
